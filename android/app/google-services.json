@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "264341485849",
+    "project_id": "helpinghand-85605",
+    "storage_bucket": "helpinghand-85605.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:264341485849:android:b1f839afe8bcbcad16ed88",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "264341485849-3sbg4du4f8gvn40lns3rrad5uidm5pn1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapp",
+            "certificate_hash": "3a74f93164b9520c08b7542075096febd47582e8"
+          }
+        },
+        {
+          "client_id": "264341485849-892elrbus7125cnoh2tjftbfiba2j0kj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoKbr8eAUXZDerkWxs_ZJ430dC4CaylPw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "264341485849-892elrbus7125cnoh2tjftbfiba2j0kj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
