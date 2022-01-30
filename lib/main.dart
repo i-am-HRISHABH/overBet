@@ -12,7 +12,7 @@ import './utils/my_user.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  CurrentUser.init();
+
   runApp(MyApp());
 }
 
@@ -25,12 +25,12 @@ class _MyAppState extends State<MyApp> {
   // const MyApp({ Key? key }) : super(key: key);
   final Future<FirebaseApp> initializeMyFirebaseApp = Firebase.initializeApp();
 
-   bool? isLogin = CurrentUser.getUserLoginStatus();
+  //  bool? isLogin = CurrentUser.getUserLoginStatus();
 
   @override
   void initState() {
     // TODO: implement initState
-    isLogin = CurrentUser.getUserLoginStatus();
+    // isLogin = CurrentUser.getUserLoginStatus();
     super.initState();
   }
 
@@ -53,9 +53,7 @@ class _MyAppState extends State<MyApp> {
           return MaterialApp(
             theme: MyTheme.lightTheme(context),
             //isUserLoggedIn !=null ? isUserLoggedIn ? Home() : SignUp() : SignIn(),
-            home:isLogin != null ? isLogin! ? HomePage() : Login() : 
-            Login(),
-            // Login(),
+            home: Login(),
             routes: {
               // "/":(context) => Login(),
               MyRoutes.loginRoute: (context) => Login(),

@@ -27,7 +27,7 @@ class _LoginState extends State<Login> {
   @override
   void initState() {
     // TODO: implement initState
-    CurrentUser.init();
+  
     super.initState();
   }
 
@@ -43,11 +43,9 @@ class _LoginState extends State<Login> {
     try {
       UserCredential myuser= await FirebaseAuth.instance
           .signInWithEmailAndPassword(email: email, password: password);
-      print(myuser);
-      print(myuser.user?.email);
-      CurrentUser.setUserEmail(myuser.user?.email);
-      CurrentUser.setUserPassword(password);
-      CurrentUser.setLoginStatus(true);
+      // print(myuser);
+      // print(myuser.user?.email);
+     
       Navigator.pushReplacementNamed(context, MyRoutes.homeRoute);
       
     } on FirebaseAuthException catch (e) {

@@ -14,22 +14,21 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   mySignOut() async {
-    CurrentUser.setLoginStatus(false);
+   
     await FirebaseAuth.instance.signOut();
     Navigator.pushReplacementNamed(context, MyRoutes.loginRoute);
   }
 
   static dynamic email = 'nothing';
   static String password = 'nothing';
-  static bool? loginStatus = false;
+  
 
   @override
   void initState() {
     // TODO: implement initState
     // CurrentUser.init();
-    email = CurrentUser.getUserEmail();
-    password = CurrentUser.getUserPassword()!;
-    loginStatus = CurrentUser.getUserLoginStatus();
+   
+  
     super.initState();
   }
 
@@ -37,7 +36,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: myDrawer(),
-      appBar: AppBar(title: Text('Homepage')),
+      appBar: AppBar(title: Text('CRIrruncy')),
       body: Center(
         child: Column(
           children: [
@@ -49,7 +48,7 @@ class _HomePageState extends State<HomePage> {
                 icon: Icon(Icons.logout)),
             Text(email),
             Text(password),
-            Text('login status: ${loginStatus.toString()}'),
+            
           ],
         ),
       ),
